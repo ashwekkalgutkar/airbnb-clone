@@ -1,0 +1,54 @@
+/* ===== AIRBNB DESIGN SYSTEM - GLOBAL RESET & VARIABLES ===== */
+:root {
+  --color-text: #222222;
+  --color-text-secondary: #717171;
+  --color-primary: #E00B41;
+  --color-primary-hover: #D70466;
+  --color-border: #DDDDDD;
+  --color-border-light: #EBEBEB;
+  --color-background-gray: #F7F7F7;
+  --font-family: 'Circular', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background-color: #ffffff;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+a { color: inherit; text-decoration: none; }
+button { background: none; border: none; cursor: pointer; font-family: inherit; color: inherit; padding: 0; }
+ul, ol { list-style: none; }
+img { display: block; max-width: 100%; }
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 744px) {
+  .container { padding: 0 40px; }
+}
+
+@media (min-width: 1128px) {
+  .container { padding: 0 80px; max-width: 1280px; }
+}
+
+.font-semibold { font-weight: 600; }
+.font-normal { font-weight: 400; }
+.underline { text-decoration: underline; }
+.cursor-pointer { cursor: pointer; }
