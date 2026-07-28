@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { ShareIcon, HeartIcon } from './Icons';
 import './Lightbox.css';
@@ -6,6 +6,18 @@ import './Lightbox.css';
 export default function Lightbox({ images, currentIndex, onNext, onPrev, onClose }) {
   const currentImage = images[currentIndex] || {};
   const [animating, setAnimating] = useState(false);
+
+  const handleNext = useCallback(() => {
+    setAnimating(true);
+    setTimeout(() => setAnimating(false), 300);
+    onNext();
+  }, [onNext]);
+
+  const handlePrev = useCallback(() => {
+    setAnimating(true);
+    setTimeout(() => setAnimating(false), 300);
+    onPrev();
+  }, [onPrev]);
 
   // Keypress and scroll lock handlers
   useEffect(() => {
@@ -29,19 +41,7 @@ export default function Lightbox({ images, currentIndex, onNext, onPrev, onClose
       document.body.style.overflow = originalStyle;
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [onNext, onPrev, onClose]);
-
-  const handleNext = () => {
-    setAnimating(true);
-    setTimeout(() => setAnimating(false), 300);
-    onNext();
-  };
-
-  const handlePrev = () => {
-    setAnimating(true);
-    setTimeout(() => setAnimating(false), 300);
-    onPrev();
-  };
+  }, [handleNext, handlePrev, onClose]);
 
   return (
     <div className="lightbox-overlay">

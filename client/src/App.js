@@ -752,7 +752,7 @@ export default function App() {
               <svg width="24" height="24" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" className="mb-4"><path d="M10 2v4M22 2v4M2 10h28M6 4h20a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" /></svg>
               <div className="font-semibold mb-2" style={{ fontSize: '14px', fontWeight: 500 }}>Cancellation policy</div>
               <div className="ttk-text mb-2">Add your trip dates to get the cancellation details for this stay.</div>
-              <a href="#" className="ttk-link font-semibold underline">Add dates</a>
+              <button type="button" className="ttk-link font-semibold underline" style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Add dates</button>
             </div>
 
             <div className="ttk-col">
@@ -761,7 +761,7 @@ export default function App() {
               <div className="ttk-text">Check-in after 2:00pm</div>
               <div className="ttk-text">Checkout before 11:00 am</div>
               <div className="ttk-text mb-2">3 guests maximum</div>
-              <a href="#" className="ttk-link font-semibold underline">Learn more</a>
+              <button type="button" className="ttk-link font-semibold underline" style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Learn more</button>
             </div>
 
             <div className="ttk-col">
@@ -770,7 +770,7 @@ export default function App() {
               <div className="ttk-text">Carbon monoxide alarm not reported</div>
               <div className="ttk-text">Smoke alarm not reported</div>
               <div className="ttk-text mb-2">Exterior security cameras on property</div>
-              <a href="#" className="ttk-link font-semibold underline">Learn more</a>
+              <button type="button" className="ttk-link font-semibold underline" style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Learn more</button>
             </div>
           </div>
         </div>

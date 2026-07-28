@@ -27,12 +27,6 @@ export default function GuestsDropdown({ guests, onGuestsChange, onClose }) {
     });
   };
 
-  const totalGuestsText = () => {
-    const total = guests.adults + guests.children;
-    const infantText = guests.infants > 0 ? `, ${guests.infants} infant${guests.infants > 1 ? 's' : ''}` : '';
-    const petText = guests.pets > 0 ? `, ${guests.pets} pet${guests.pets > 1 ? 's' : ''}` : '';
-    return `${total} guest${total > 1 ? 's' : ''}${infantText}${petText}`;
-  };
 
   return (
     <div className="guests-dropdown">
