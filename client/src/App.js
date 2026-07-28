@@ -212,11 +212,6 @@ export default function App() {
                 </ol>
               </div>
 
-              <img
-                src="/images/6b72f8b5-0e66-4bf1-8ba3-ff0f87ff3687.jpg"
-                alt="Mirashya Homes Avatar"
-                className="host-avatar-lg"
-              />
             </div>
 
             <hr className="section-divider" />
